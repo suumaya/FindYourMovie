@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <Folder Include="Views\HelloWorld\" />
+    <Folder Include="Data\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="5.0.1" />
