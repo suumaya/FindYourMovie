@@ -14,7 +14,7 @@
         "outputPath": "/Users/tamimisu/Projects/MvcMovie/MvcMovie/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/tamimisu/.config/NuGet/NuGet.Config"
+          "/Users/tamimisu/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
