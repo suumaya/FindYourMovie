@@ -8,6 +8,8 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using MvcMovie.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace MvcMovie
 {
@@ -24,6 +26,13 @@ namespace MvcMovie
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            services.AddDbContext<MvcMovieContext>(options =>
+            options.UseSqlite(Configuration.GetConnectionString("MvcMovieContext")));
+            //The name of the connection string is passed into the context
+            // by calling a method on a DbContextOptions object.
+            //For local development, the ASP.NET Core configuration system
+            //reads the connection string from the appsettings.json file
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
